@@ -4,8 +4,16 @@
 
 Modified as an example of proto2
 
-### Generate the proto code. Run:
+## Proto Code Generation
+
+Run the next command to generate the proto code:
 
 `> protoc -I . --go_out=.  .\addressbook.proto`
 
-to generate the tutorialpb/addressbookpb/addressbook.pb.go file.
+This will generate the tutorialpb/addressbookpb/addressbook.pb.go file.
+
+Where tutorial is the package name, and addressbook the file name.
+
+## Running the app
+
+`> go run .\main.go`
