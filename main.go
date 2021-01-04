@@ -10,22 +10,23 @@ import (
 
 func main() {
 	// Create Addressbook Object with few persons
+	home := pb.Person_HOME
 	book := &pb.AddressBook{
 		People: []*pb.Person{
 			{
-				Id:    1234,
-				Name:  "John Doe",
-				Email: "jdoe@example.com",
+				Id:    proto.Int32(1234),
+				Name:  proto.String("John Doe"),
+				Email: proto.String("jdoe@example.com"),
 				Phones: []*pb.Person_PhoneNumber{
-					{Number: "555-4321", Type: pb.Person_HOME},
+					{Number: proto.String("555-4321"), Type: &home},
 				},
 			},
 			{
-				Id:    1235,
-				Name:  "Alex",
-				Email: "alex@example.com",
+				Id:    proto.Int32(1235),
+				Name:  proto.String("Alex"),
+				Email: proto.String("alex@example.com"),
 				Phones: []*pb.Person_PhoneNumber{
-					{Number: "1234-5678", Type: pb.Person_HOME},
+					{Number: proto.String("1234-5678"), Type: &home},
 				},
 			},
 		},
