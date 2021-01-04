@@ -5,7 +5,7 @@ import (
 	"log"
 
 	"github.com/golang/protobuf/proto"
-	pb "github.com/gufranmirza/go-pb/tutorialpb/addressbookpb"
+	pb "github.com/gzmorell/go-pb/tutorialpb/addressbookpb"
 )
 
 func main() {
