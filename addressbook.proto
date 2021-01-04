@@ -5,7 +5,6 @@
 syntax = "proto2";
 package tutorial;
 
-import "google/protobuf/timestamp.proto";
 // [END declaration]
 
 // [START go_declaration]
@@ -26,12 +25,10 @@ message Person {
 
   message PhoneNumber {
     optional string number = 1;
-    optional PhoneType type = 2;
+    optional PhoneType type = 2 [default = HOME];
   }
 
   repeated PhoneNumber phones = 4;
-
-  optional google.protobuf.Timestamp last_updated = 5;
 }
 
 // Our address book file is just one of these.
